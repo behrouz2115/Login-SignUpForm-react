@@ -1,9 +1,10 @@
 import React from 'react';
+import SignUp from './component/SignUp';
 
 const App = () => {
   return (
     <div>
-      <h1>test</h1>
+      <SignUp/>
     </div>
   );
 };
