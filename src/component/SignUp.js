@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {validate} from "./validate";
 
 const SignUp = () => {
@@ -8,7 +8,13 @@ const SignUp = () => {
         password:"",
         confirmPassword:"",
         isAccepted:false
-    })
+    });
+    const [errors, setErrors]=useState({});
+    useEffect (()=> {
+        setErrors(validate(data))
+        console.log(errors)
+    },[data])
+
     const changeHandler=event => {
         if (event.target.name === "isAccepted"){
             setData({...data,[event.target.name]:event.target.checked})
@@ -31,7 +37,7 @@ const SignUp = () => {
                 </div>
                 <div>
                     <label>Password</label>
-                    <input type="password" name="paaword" value={data.password} onChange={changeHandler}/>
+                    <input type="password" name="password" value={data.password} onChange={changeHandler}/>
                 </div>
                 <div>
                     <label>Confirm Password</label>
