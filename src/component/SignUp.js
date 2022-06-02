@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {validate} from "./validate";
 
 const SignUp = () => {
     const [data, setData]=useState({
@@ -36,7 +37,7 @@ const SignUp = () => {
                     <label>Confirm Password</label>
                     <input type="password" name="confirmPassword" value={data.confirmPassword} onChange={changeHandler}/>
                     <div>
-                    <label>I accept terms of privacy policy</label>
+                 <label>I accept terms of privacy policy</label>
                     <input type="checkbox" name="isAccepted" value={data.isAccepted} onChange={changeHandler}/>
                 </div>
                 <div>
