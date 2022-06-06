@@ -44,6 +44,13 @@ const SignUp = () => {
             notify("You Signed in succussfuly!", "success")
         }else{
             notify("Invalid data!", "error")
+            setTouched({
+                name: true,
+                email: true,
+                password: true,
+                confirmPassword: true,
+                isAccepted: true
+            })
         }
     }
 
