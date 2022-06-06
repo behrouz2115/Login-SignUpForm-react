@@ -129,3 +129,21 @@ input[type="checkbox"]:focus{
 .formButtons a:hover{
    color: #004aaa;
 }
+@media (max-width: 440px) {
+  .formContainer {
+    padding: 20px;
+    margin: 50px 20px;
+  }
+
+  .formContainer {
+    width: 90%;
+  }
+
+  .formInput {
+    width: 90%;
+  }
+
+  .uncompleted {
+    width: 90%;
+  }
+}
